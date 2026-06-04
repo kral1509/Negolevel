@@ -7,42 +7,64 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* 🔵 NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+
     width: 100%;
+
     background: #000C36;
-    height: 65px;
+
+    height: 90px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 40px;
+
     box-sizing: border-box;
-    z-index: 1000;
+
+    z-index: 9999;
 }
 
 /* LINKS */
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
 nav a {
     color: white;
     margin-left: 30px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     white-space: nowrap;
 }
 
-/* 🧱 CONTENEDOR CENTRAL */
+/* 🧱 CONTENEDOR */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* 🖼️ BANNER */
 .banner {
-    margin-top: 65px;
+    margin-top: 90px;
 }
 
 .banner img {
@@ -50,7 +72,7 @@ nav a {
     display: block;
 }
 
-/* ⬜ CONTENIDO GENERAL */
+/* ⬜ CONTENIDO */
 .contenido {
     min-height: 350px;
     padding: 0;
@@ -59,15 +81,23 @@ nav a {
 /* INTRO GENERAL */
 .intro-section {
     background-color: rgba(255, 255, 255, 0.95);
+
     width: 100%;
+
     min-height: 250px;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
+
     padding: 30px 20px;
+
     box-sizing: border-box;
+
     text-align: center;
+
     margin-bottom: 70px;
 }
 
@@ -81,23 +111,37 @@ nav a {
     padding-bottom: 40px;
 }
 
-/* SECCIÓN INICIO */
+/* ========================= */
+/* INICIO */
+/* ========================= */
+
 .inicio-section .intro-section {
     display: flex;
+
     flex-direction: row;
+
     align-items: flex-end;
+
     justify-content: space-between;
-    padding: 50px 50px 35px 50px;
-    overflow: hidden;    
+
+    padding: 50px 50px 0px 50px;
+
+    overflow: hidden;
+
+    position: relative;
 }
 
 /* TEXTO */
 .inicio-section .text-content {
     width: 60%;
-    margin-left: 0%;
+
     text-align: left;
+
     position: relative;
+
     z-index: 2;
+
+    padding-bottom: 35px;
 }
 
 .inicio-section .text-content h2 {
@@ -105,58 +149,83 @@ nav a {
 }
 
 .inicio-section .text-content p {
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: normal;
 }
 
 /* IMAGEN */
 .inicio-section .image-content {
     width: 40%;
+
     display: flex;
+
     align-items: flex-end;
+
     justify-content: flex-end;
+
     position: relative;
+
+    height: 100%;
 }
 
 .inicio-image {
-    position: absolute;
-    bottom: -35px;
-    right: -140px;
+    position: relative;
 
     width: 170%;
+
     max-width: none;
 
     height: auto;
 
     z-index: 1;
+
+    right: -140px;
+
+    bottom: 0;
+
+    display: block;
 }
 
-/* TEXTOS */
+/* TEXTOS GENERALES */
 .intro-section h1 {
     margin: 0 0 20px 0;
+
     font-size: 46px;
+
     color: #0a1f44;
+
     font-weight: bold;
 }
 
 .intro-section h2 {
     margin: 0 0 20px 0;
+
     font-size: 36px;
+
     color: #0a1f44;
+
     font-weight: bold;
 }
 
 .intro-section p {
     margin: 0 0 15px 0;
+
     font-size: 19px;
+
+    font-weight: normal;
+
     color: #333;
+
     line-height: 1.6;
+
     max-width: 800px;
 }
 
 /* LOGO */
 .logo {
     height: 100%;
-    max-height: 65px;
+    max-height: 85px;
+
     object-fit: contain;
 }
 
@@ -165,40 +234,40 @@ nav a {
     align-items: center;
 }
 
+/* LISTAS */
 ul {
     list-style: none;
     padding-left: 0;
 }
 
-ul li::before {
-    content: "✔ ";
-    color: #0a1f44;
-    font-weight: bold;
-}
-
-/* LISTA */
 .inicio-section ul {
     list-style: none;
+
     padding-left: 30px;
+
     margin: 15px 0;
 }
 
 .inicio-section li {
-    font-size: 18px;
+    font-size: 19px;
+
+    font-weight: normal;
+
     color: #333;
+
     line-height: 1.6;
+
     margin-bottom: 8px;
 }
 
 .inicio-section li::before {
     content: "• ";
-    color: #0a1f44;
-    font-weight: bold;
-    font-size: 24px;
-}
 
-html {
-    scroll-behavior: smooth;
+    color: #0a1f44;
+
+    font-weight: bold;
+
+    font-size: 24px;
 }
 
 #quehacemos,
@@ -213,19 +282,26 @@ html {
 
 .servicios-section h2 {
     font-size: 38px;
+
     color: #0a1f44;
+
     margin-bottom: 40px;
+
     margin-top: 15px;
 }
 
 /* GRID */
 .services-grid {
     width: 100%;
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 20px 80px;
 
     max-width: 950px;
+
     margin: 0 auto;
 }
 
@@ -252,23 +328,34 @@ html {
 
 .service-item h3 {
     font-size: 23px;
+
     color: #000;
+
     margin-bottom: 15px;
 }
 
 .service-item p {
     font-size: 17px;
+
+    font-weight: normal;
+
     line-height: 1.7;
+
     color: #333;
+
     text-align: justify;
+
     hyphens: auto;
 }
 
 /* LÍNEA */
 .services-divider {
     width: 90%;
+
     height: 2px;
+
     background-color: #222;
+
     margin: 50px 0;
 }
 
@@ -282,39 +369,52 @@ html {
 
 .entities-section h2 {
     font-size: 38px;
+
     color: #0a1f44;
+
     margin-bottom: 25px;
 }
 
 .entities-text {
     max-width: 850px;
+
     margin: 0 auto 50px auto;
+
     text-align: center;
-    font-size: 18px;
+
+    font-size: 19px;
+
+    font-weight: normal;
+
     line-height: 1.7;
 }
 
 /* GRID LOGOS */
 .entities-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     gap: 50px 100px;
 
     max-width: 850px;
+
     margin: 30px auto 0 auto;
 }
 
-/* ITEM LOGO */
+/* ITEM */
 .entity-item {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 }
 
 /* LOGOS */
 .entity-item img {
     max-width: 240px;
+
     height: 110px;
 
     object-fit: contain;
@@ -325,7 +425,11 @@ html {
 /* TEXTO */
 .entity-item p {
     font-size: 16px;
+
+    font-weight: normal;
+
     text-align: center;
+
     color: #333;
 }
 
@@ -339,50 +443,74 @@ html {
 
 .contacto-section {
     display: flex;
+
     flex-direction: row;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 60px 70px;
 
     overflow: hidden;
+
     position: relative;
 }
 
 /* IZQUIERDA */
 .contacto-left {
     width: 50%;
+
     position: relative;
+
     left: 40px;
 }
 
 /* TÍTULO */
 .contacto-left h2 {
     font-size: 40px;
+
     color: #0a1f44;
 
     margin-bottom: 25px;
+
     margin-left: -70px;
 }
 
 /* TEXTO */
 .contacto-texto {
-    font-size: 18px;
+
+    text-align: left;
+}
+
+.contacto-texto h3 {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 0 0 6px 0;
+
+    color: #000000;
+}
+
+.contacto-texto p {
+
+    font-size: 19px;
+
+    font-weight: normal;
+
     line-height: 1.7;
 
-    color: #333;
-
-    max-width: 500px;
-
-    margin-bottom: 50px;
-
-    position: relative;
-    left: -35px;
+    margin: 0;
 }
+
+
 
 /* ITEMS */
 .contacto-item {
     display: flex;
+
     align-items: center;
 
     max-width: 550px;
@@ -390,25 +518,32 @@ html {
     margin-bottom: 50px;
 
     position: relative;
+
     left: 40px;
+
     top: 50px;
 }
 
 /* INFO */
 .contacto-info {
     width: 280px;
+
     text-align: left;
 }
 
 .contacto-info h3 {
     font-size: 24px;
-    margin-bottom: 10px;
 
     color: #000;
+
+    margin-bottom: 10px;
 }
 
 .contacto-info p {
     font-size: 18px;
+
+    font-weight: normal;
+
     color: #222;
 
     margin: 0;
@@ -420,8 +555,6 @@ html {
 
     width: 55px;
     height: 55px;
-
-    overflow: visible;
 
     flex-shrink: 0;
 }
@@ -436,6 +569,7 @@ html {
     transition: 0.3s;
 
     position: relative;
+
     top: 20px;
 }
 
@@ -451,7 +585,9 @@ html {
     position: relative;
 
     display: flex;
+
     justify-content: flex-end;
+
     align-items: flex-start;
 }
 
@@ -499,6 +635,7 @@ html {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     box-sizing: border-box;
@@ -511,6 +648,7 @@ html {
     color: white;
 
     font-size: 16px;
+
     line-height: 1.5;
 }
 
@@ -531,7 +669,7 @@ html {
 }
 
 /* ========================= */
-/* MODAL REDES */
+/* MODAL */
 /* ========================= */
 
 .modal-redes {
@@ -566,6 +704,8 @@ html {
     position: relative;
 
     text-align: center;
+
+    box-sizing: border-box;
 }
 
 /* TÍTULO */
@@ -575,6 +715,7 @@ html {
     font-size: 32px;
 
     margin-top: 0;
+
     margin-bottom: 35px;
 }
 
@@ -618,243 +759,792 @@ html {
 }
 
 /* ===================================== */
-/* 📱 RESPONSIVE TABLET Y CELULAR */
-/* ===================================== */
-
-@media (max-width: 1024px) {
-
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-    }
-
-    /* NAVBAR */
-    .navbar {
-        height: 60px;
-        padding: 0 20px;
-    }
-
-    nav a {
-        font-size: 15px;
-        margin-left: 18px;
-    }
-
-    .logo {
-        max-height: 55px;
-    }
-
-    .banner {
-        margin-top: 60px;
-    }
-
-    /* TEXTOS GENERALES */
-    .intro-section h1 {
-        font-size: 36px;
-    }
-
-    .intro-section h2 {
-        font-size: 30px;
-    }
-
-    .intro-section p {
-        font-size: 17px;
-    }
-
-    /* ========================= */
-    /* INICIO */
-    /* ========================= */
-
-    .inicio-section .intro-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 30px;
-    }
-
-    .inicio-section .text-content {
-        width: 100%;
-    }
-
-    .inicio-section .image-content {
-        width: 100%;
-        height: 300px;
-        margin-top: 20px;
-    }
-
-    .inicio-image {
-        position: relative;
-        width: 100%;
-        right: 0;
-        bottom: 0;
-    }
-
-    /* LISTA */
-    .inicio-section li {
-        font-size: 17px;
-    }
-
-    /* ========================= */
-    /* SERVICIOS */
-    /* ========================= */
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .service-item {
-        padding: 25px;
-    }
-
-    .service-item h3 {
-        font-size: 22px;
-    }
-
-    .service-item p {
-        font-size: 16px;
-    }
-
-    /* ========================= */
-    /* ENTIDADES */
-    /* ========================= */
-
-    .entities-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .entity-item img {
-        max-width: 200px;
-        height: auto;
-    }
-
-    /* ========================= */
-    /* CONTACTO */
-    /* ========================= */
-
-    .contacto-section {
-        flex-direction: column;
-        padding: 50px 30px;
-    }
-
-    .contacto-left {
-        width: 100%;
-        z-index: 2;
-    }
-
-    .contacto-right {
-        width: 100%;
-        height: 250px;
-        margin-top: 20px;
-    }
-
-    .img-contacto {
-        position: relative;
-        width: 100%;
-        top: 0;
-        right: 0;
-    }
-
-    .contacto-left h2 {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .contacto-texto {
-        left: 0;
-        text-align: center;
-        margin: 0 auto 40px auto;
-    }
-
-    .contacto-item {
-        justify-content: space-between;
-        max-width: 100%;
-    }
-
-    .contacto-info {
-        width: auto;
-    }
-
-    .contacto-info h3 {
-        font-size: 22px;
-    }
-
-    .contacto-info p {
-        font-size: 16px;
-    }
-
-    .flecha-contacto {
-        width: 50px;
-    }
-
-    /* ========================= */
-    /* FOOTER */
-    /* ========================= */
-
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    /* ========================= */
-    /* MODAL REDES */
-    /* ========================= */
-
-    .modal-contenido {
-        width: 90%;
-        padding: 30px 20px;
-    }
-
-    .redes-botones img {
-        width: 100%;
-        max-width: 280px;
-    }
-}
-
-/* ===================================== */
-/* 📱 CELULARES PEQUEÑOS */
+/* 📱 CELULAR */
 /* ===================================== */
 
 @media (max-width: 600px) {
 
-    .intro-section h1 {
-        font-size: 28px;
+    /* NAVBAR */
+    .navbar {
+        height: 75px;
+
+        padding: 0 15px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
     }
 
-    .intro-section h2 {
-        font-size: 24px;
+    /* LOGO */
+    .logo {
+        max-height: 55px;
     }
 
-    .intro-section p {
-        font-size: 15px;
+    /* LINKS */
+    nav {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
     }
 
     nav a {
-        font-size: 13px;
-        margin-left: 10px;
-    }
+        margin-left: 0;
 
-    .service-item h3 {
-        font-size: 20px;
-    }
-
-    .service-item p {
-        font-size: 15px;
-    }
-
-    .contacto-info h3 {
-        font-size: 18px;
-    }
-
-    .contacto-info p {
         font-size: 14px;
     }
 
-    .flecha-contacto {
-        width: 45px;
+    /* BANNER */
+    .banner {
+        margin-top: 75px;
     }
 
-    .footer {
-        padding: 20px;
+    .banner img {
+        content: url("img/banner_movil.png");
+
+        width: 100%;
+
+        display: block;
     }
+
+    /* CONTENEDOR */
+    .container {
+        padding: 0;
+    }
+
+    /* SECCIONES */
+    .intro-section {
+        border-radius: 0;
+
+        padding: 15px 22px;
+
+        margin-bottom: 45px;
+    }
+
+    /* BIENVENIDA */
+    .intro-section h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .intro-section p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+.inicio-section .intro-section {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 35px 22px 5px 22px;
+
+    overflow: hidden;
+}
+
+/* TEXTO */
+.inicio-section .text-content {
+
+    width: 100%;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 0;
+
+}
+
+/* TÍTULO */
+.inicio-section .text-content h2 {
+
+    font-size: 30px;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+/* PÁRRAFOS */
+.inicio-section .text-content p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+/* SEGUNDO PÁRRAFO */
+.inicio-section .text-content p:nth-of-type(2) {
+
+    width: 62%;
+}
+
+/* CONTENEDOR IMAGEN */
+.inicio-section .image-content {
+
+    position: absolute;
+
+    right: -90px;
+
+    top: 210px;
+
+    width: 325px;
+
+    height: 390px;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* IMAGEN */
+.inicio-image {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: auto;
+
+    right: 0;
+
+    bottom: 0;
+
+    max-width: none;
+}
+
+/* LISTA */
+.inicio-section ul {
+
+    padding-left: 1px;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+}
+
+.inicio-section li {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 1px;
+}
+
+.inicio-section li::before {
+
+    content: "✔ ";
+
+    font-size: 16px;
+
+    color: #0a1f44;
+
+    font-weight: bold;
+}
+
+/* ========================= */
+/* SERVICIOS CELULAR */
+/* ========================= */
+
+.servicios-section h2 {
+
+    font-size: 32px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.services-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 22px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+/* CUADROS */
+.service-item {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-radius: 16px;
+}
+
+/* TÍTULOS */
+.service-item h3 {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: #000;
+}
+
+/* TEXTO */
+.service-item p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    font-weight: normal;
+
+    text-align: center;
+}
+
+/* LÍNEA */
+.services-divider {
+
+    width: 85%;
+
+    margin: 45px auto;
+}
+
+/* ========================= */
+/* ENTIDADES CELULAR */
+/* ========================= */
+
+.entities-section h2 {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.entities-text {
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.entities-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    width: 100%;
+}
+
+/* ITEM */
+.entity-item {
+
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    align-items: center;
+
+    column-gap: 15px;
+
+    width: 100%;
+}
+
+/* LOGOS */
+.entity-item img {
+
+    max-width: 150px;
+
+    max-height: 95px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    justify-self: center;
+
+    margin-bottom: 0;
+}
+
+/* LOGO SRI */
+.logo-sri {
+
+    max-width: 80px !important;
+
+    width: auto ;
+
+    height: auto ;
+}
+
+/* TEXTO */
+.entity-item p {
+
+    text-align: left;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-weight: normal;
+
+    margin: 0;
+}
+
+/* ========================= */
+/* CONTACTO CELULAR */
+/* ========================= */
+
+.contacto-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 35px 20px 30px 20px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+/* BLOQUE IZQUIERDO */
+.contacto-left {
+
+    width: 100%;
+
+    position: relative;
+
+}
+
+/* TÍTULO */
+.contacto-left h2 {
+
+    text-align: left;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #0a1f44;
+
+    margin: 0 0 12px -30px;
+}
+
+/* TEXTO */
+.contacto-texto {
+
+    text-align: left;
+
+    width: 50%;
+
+    max-width: 55%;
+
+    margin: 0 0 15px -30px;
+}
+
+.contacto-texto h3 {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    margin: 0 0 6px 0;
+
+    color: #000000;
+}
+
+.contacto-texto p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+/* IMAGEN */
+.contacto-right {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 32%;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.img-contacto {
+
+    position: relative;
+
+    width: 180%;
+
+    max-width: none;
+
+    height: auto;
+
+    right: -10px;
+
+    top: 0;
+}
+
+/* ITEMS */
+.contacto-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    margin: 0 0 24px 0;
+
+    left: 15px;
+
+    top: 10px;
+
+    box-sizing: border-box;
+}
+
+/* INFO */
+.contacto-info {
+
+    width: 230px;
+
+    text-align: left;
+}
+
+.contacto-info h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.contacto-info p {
+
+    font-size: 15px;
+
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+/* BOTONES */
+.contacto-item a {
+
+    width: 45px;
+
+    height: 45px;
+
+    margin-left: -30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.flecha-contacto {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: block;
+
+    position: relative;
+
+    top: 0;
+}
+
+/* ========================= */
+/* MODAL REDES CELULAR */
+/* ========================= */
+
+.modal-contenido {
+
+    width: 85%;
+
+    max-width: 320px;
+
+    padding: 20px 15px;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+/* TÍTULO */
+.modal-contenido h2 {
+
+    font-size: 22px;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+/* BOTÓN CERRAR */
+.cerrar-modal {
+
+    top: 5px;
+
+    right: 12px;
+
+    font-size: 30px;
+}
+
+/* BOTONES */
+.redes-botones {
+
+    gap: 12px;
+}
+
+/* IMÁGENES */
+.redes-botones img {
+
+    width: 100%;
+
+    max-width: 220px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+/* ========================= */
+/* FOOTER CELULAR */
+/* ========================= */
+
+.footer {
+
+    width: 100%;
+
+    padding: 20px 0;
+}
+
+.footer-content {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+/* IZQUIERDA */
+.footer-left {
+
+    text-align: left;
+}
+
+.footer-left p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+/* DERECHA */
+.footer-right {
+
+    text-align: right;
+}
+
+.footer-right a {
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+/* ===================================== */
+/* POLITICA - NAVBAR Y FOOTER CELULAR */
+/* ===================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+
+        height: 75px !important;
+
+        padding: 0 15px !important;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+    .logo {
+
+        max-height: 55px !important;
+    }
+
+    nav {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    nav a {
+
+        margin-left: 0 !important;
+
+        font-size: 14px !important;
+
+        white-space: nowrap;
+    }
+
+    /* FOOTER */
+
+    .footer {
+
+        width: 100%;
+
+        padding: 20px 0 !important;
+    }
+
+    .footer-content {
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        justify-content: space-between !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+        padding: 0 20px !important;
+
+        box-sizing: border-box;
+    }
+
+    .footer-left {
+
+        text-align: left;
+    }
+
+    .footer-left p {
+
+        margin: 0;
+
+        font-size: 13px !important;
+
+        line-height: 1.4;
+    }
+
+    .footer-right {
+
+        text-align: right;
+    }
+
+    .footer-right a {
+
+        font-size: 13px !important;
+
+        text-decoration: none;
+    }
+}
+
+/* CONTENIDO POLÍTICA */
+
+.privacy-container h1 {
+
+    font-size: 24px !important;
+
+    margin-bottom: 25px;
+}
+
+.privacy-container p {
+
+    font-size: 16px !important;
+
+    line-height: 1.7;
+}
+
+.update-date {
+
+    font-size: 15px !important;
+}
+
+.privacy-container {
+
+    padding-left: 40px !important;
+
+    padding-right: 40px !important;
+}
+
 }
