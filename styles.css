@@ -788,7 +788,6 @@ ul {
 
         align-items: center;
 
-        gap: 12px;
     }
 
     nav a {
@@ -1171,8 +1170,6 @@ ul {
     text-align: left;
 
     width: 50%;
-
-    max-width: 55%;
 
     margin: 0 0 15px -30px;
 }
